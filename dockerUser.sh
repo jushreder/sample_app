@@ -21,7 +21,7 @@ echo "COPY ./static /home/myapp/static" >> tempdir/Dockerfile
 echo "COPY ./templates /home/myapp/templates" >> tempdir/Dockerfile
 echo "COPY juapp.py /home/myapp/" >> tempdir/Dockerfile
 
-echo "EXPOSE 5555" >> tempdir/Dockerfile
+echo "EXPOSE 5050" >> tempdir/Dockerfile
 
 echo "CMD python3 /home/myapp/juapp.py" >>tempdir/Dockerfile
 
@@ -29,7 +29,7 @@ cd tempdir
 
 docker build -t juapp.py .
 
-docker run -t -d -p 5555:5555 --name jushr juapp.py
+docker run -t -d -p 5050:5050 --name jushr juapp.py
 
 docker ps -a
 
